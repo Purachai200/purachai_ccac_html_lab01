@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>CSS Lab01 - Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1 class="mainTitle">Profile Card</h1>
+    <div class="container">
+        <div class="card" id="card">
+            <button onclick="showExit()"><label class="closeBTN">X</label></button>
+            <div class="badge"><p id="badgeNumber">0</p></div>
+            <img src="./avatar.png" class="avatar" alt="MyAvatar">
+            <hr>
+            <h3 class="textPurachai">ปุระชัย  เหมกุล</h3>
+        </div>
+    </div>
+    <script>
+        function showExit(){
+            alert("ตอนนี้คุณกดออกจากการ์ดแล้ว")
+            location.reload();
+        }
+
+        function clickToPlus(){
+            let number = 0;
+            document.getElementById('card').addEventListener('click', function() {
+                number++;
+                document.getElementById('badgeNumber').innerText = number;
+            });
+        }
+        clickToPlus();
+    </script>
+</body>
+</html>
